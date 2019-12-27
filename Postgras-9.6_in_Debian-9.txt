@@ -1,0 +1,92 @@
+Intalando Postgres e Pgadmin4 + apache2
+
+        add source. list
+	    deb http://apt.postgresql.org/pub/repos/apt/ stretch-pgdg main contrib non-free
+
+    Assinando package
+	    wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | apt-key add -
+
+    Instalando motor
+	    apt -y install postgresql-9.6
+	    apt update && apt upgrade
+
+    Instalando Pgadmin4
+	
+    Obs.: recomendo abilitar repositorio "testing" pgadmin4 usa o 'flask' que pode nao estar 
+    presente no repositorio estavel do debian
+        "deb http://ftp.br.debian.org/debian testing main"
+    
+    apt -y install pgadmin4 pgadmin4-apache2
+	service postgresql restart
+
+
+
+Configurando Postgres
+    Edite o postgresql.conf e o pg_hba.conf
+        
+        nano /etc/postgresql/9.3/main/postgresql.conf   -> aceitando todas as conexões.
+            listen_addresses = '*'
+        
+        nano /etc/postgresql/9.3/main/pg_hba.conf    ->  limitando redes de conexão externa protegendo com criptografia md5
+            host    all             all             192.168.1.0/24          md5 
+        
+        service postgresql restart
+
+
+Testando Conexão
+    su - postgres      -> acessando diretorio postgres 
+    psql               -> verificando status da Conexão
+
+Alterando senha do usuario padrao (postgres)
+	psql -c "alter user postgres with password 'DIGITE AQUI SUA SENHA'"
+    
+    Apos alterar a senha proteja todas as conexões em:
+        nano /etc/postgresql/9.3/main/pg_hba.conf  -> Observe a descrição do arquivo para tipos de acesso "Recomendo limitar a sua rede"  
+    
+    host <NomeBanco> <NomeUsuario> <Rede que vai acessar no meu caso-> 192.168.0.1/24>  md5 
+
+        md5 -> criptografa a senhas de acesso.
+        peer -> permite tudo, não criptografa.   
+
+
+
+Verificando serviço ativo
+    netstat  -tunelp | grep 5432
+
+
+Recomendo dasativar o ipv6
+    nano /etc/sysctl.conf
+
+        net.ipv6.conf.all.disable_ipv6 = 1
+	    net.ipv6.conf.default.disable_ipv6 = 1
+	    net.ipv6.conf.lo.disable_ipv6 = 1
+        
+    sysctl -p
+
+
+Acessando via Pgadmin4
+        http://[ServerIP_or_domain]/pgadmin4  -> entre com o login e senha cadastrado na instalação do 'Pgadmin4'.
+
+
+Conectando ao motor postgres
+    Add New Server
+
+
+
+
+
+Gerador de sorce.list - Debian https://debgen.simplylinux.ch/
+
+Referencias   
+	https://app.vagrantup.com/mbr/boxes/postgres
+	https://blog.4linux.com.br/replicacao-assincrono-com-postgresql-9-6/
+	https://www.oficinadanet.com.br/artigo/2101/liberando_conexoes_remotas_ao_postgresql      -- Acesso via PgAdmin4
+	https://computingforgeeks.com/install-postgresql-12-on-debian/
+	https://www.cyberciti.biz/faq/how-to-install-setup-postgresql-9-6-on-debian-linux-9/
+	https://medium.com/@yenthanh/multi-master-replication-for-postgresql-databases-with-postgres-bdr-eb6d8b1bc189
+	https://tecadmin.net/install-pgadmin4-on-debian/
+	https://computingforgeeks.com/how-to-install-pgadmin4-on-debian/
+	https://servidordebian.org/pt/buster/start		
+
+
+
