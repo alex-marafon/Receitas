@@ -28,9 +28,9 @@ Configurando Postgres
             listen_addresses = '*'
         
         nano /etc/postgresql/9.6/main/pg_hba.conf    ->  limitando redes de conexão externa protegendo com criptografia md5
-            host    all             all             192.168.1.0/24          md5 
+            host    all             all             192.168.0.0/24          md5 
         
-        service postgresql restart
+        systemctl status postgresql.service
 
 
 Testando Conexão
@@ -38,10 +38,10 @@ Testando Conexão
     psql               -> verificando status da Conexão
 
 Alterando senha do usuario padrao (postgres)
-	psql -c "alter user postgres with password 'DIGITE AQUI SUA SENHA'"
+	psql -c "alter user postgres with password 'Senha'"
     
     Apos alterar a senha proteja todas as conexões em:
-        nano /etc/postgresql/9.3/main/pg_hba.conf  -> Observe a descrição do arquivo para tipos de acesso "Recomendo limitar a sua rede"  
+        nano /etc/postgresql/9.6/main/pg_hba.conf  -> Observe a descrição do arquivo para tipos de acesso "Recomendo limitar a sua rede"  
     
     host <NomeBanco> <NomeUsuario> <Rede que vai acessar no meu caso-> 192.168.0.1/24>  md5 
 
