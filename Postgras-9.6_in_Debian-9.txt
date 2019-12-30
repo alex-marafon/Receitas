@@ -24,10 +24,10 @@ Intalando Postgres e Pgadmin4 + apache2
 Configurando Postgres
     Edite o postgresql.conf e o pg_hba.conf
         
-        nano /etc/postgresql/9.3/main/postgresql.conf   -> aceitando todas as conexões.
+        nano /etc/postgresql/9.6/main/postgresql.conf   -> aceitando todas as conexões.
             listen_addresses = '*'
         
-        nano /etc/postgresql/9.3/main/pg_hba.conf    ->  limitando redes de conexão externa protegendo com criptografia md5
+        nano /etc/postgresql/9.6/main/pg_hba.conf    ->  limitando redes de conexão externa protegendo com criptografia md5
             host    all             all             192.168.1.0/24          md5 
         
         service postgresql restart
