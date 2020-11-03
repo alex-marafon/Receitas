@@ -1,0 +1,1 @@
+Reinciar licença de 180 dias ate 5x   ->   CMD adm -> slmgr. vbs /rearm 
