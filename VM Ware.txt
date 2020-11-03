@@ -3,3 +3,5 @@ Site -> https://blog.techygeekshome.info/2018/07/vmware-esx-6-7-evaluation-seria
 versão -> 6.7
 
 Key - > 0H6A3-2UJ5P-38U89-0UAUM-9XU3L
+
+Obs: cuidar para nao mudar o teclado na hora da instalação, vai da erro de acesso caso nao observe isso recomendo deixar como Padrão.
