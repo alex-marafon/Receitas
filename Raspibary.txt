@@ -1,0 +1,7 @@
+Remover descanso de tela Raspibary
+
+sudo nano /etc/lightdm/lightdm.conf   -> add codigo ->
+
+[SeatDefaults]
+xserver-command=X -s 0 -dpms
+
