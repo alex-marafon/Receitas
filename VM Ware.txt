@@ -1,7 +1,13 @@
 Site -> https://blog.techygeekshome.info/2018/07/vmware-esx-6-7-evaluation-serial-number-activation/
 
 versão -> 6.7
+Key -> 0H6A3-2UJ5P-38U89-0UAUM-9XU3L
 
-Key - > 0H6A3-2UJ5P-38U89-0UAUM-9XU3L
+versão -> 6.5
+Key -> JV425-4H100-VZHH8-Q23NP-3A9PP
+
+versão -> 5.5
+Key -> MN09P-4239L-18G40-0L1UP-CRH04
+
 
 Obs: cuidar para nao mudar o teclado na hora da instalação, vai da erro de acesso caso nao observe isso recomendo deixar como Padrão.
