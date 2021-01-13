@@ -90,3 +90,6 @@ Referencias
 
 
 
+Redimencioanando disco no linux 
+https://www.somosagility.com.br/reduzindo-uma-particao-no-linux/
+

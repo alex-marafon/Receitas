@@ -1,0 +1,1 @@
+https://docs.bitnami.com/installer/apps/alfresco/configuration/install-plugins/

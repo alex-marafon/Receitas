@@ -1,0 +1,14 @@
+
+
+
+###############  Leituras ##############
+https://carloscds.net/categories/c-sharp/
+
+
+############### Exemplos de codigo #####
+https://github.com/FirebirdSQL/NETProvider/blob/master/Provider/docs/entity-framework-core.md
+
+http://tracker.firebirdsql.org/browse/DNET-798
+
+-> Scaffold-DbContext 'Server=localhost; database=<Caminho do banco>; user=<Usuario>; password=<Senha>' FirebirdSql.EntityFrameworkCore.Firebird -Force -OutputDir Models -v
+
