@@ -93,3 +93,19 @@ Referencias
 Redimencioanando disco no linux 
 https://www.somosagility.com.br/reduzindo-uma-particao-no-linux/
 
+
+
+
+
+
+
+#####################################################
+
+Debian 10 - faze 2
+
+SRV Master 
+   %%%%%%%%%%%%%%   Teste    %%%%%%%%%%%%%
+https://blog.4linux.com.br/replicacao-assincrono-com-postgresql-9-6/
+https://perlubantuan.com/set-up-master-slave-replication-for-postgresql-9-6-on-ubuntu-16-04/
+https://www.howtoforge.com/tutorial/how-to-set-up-master-slave-replication-for-postgresql-96-on-ubuntu-1604/
+
